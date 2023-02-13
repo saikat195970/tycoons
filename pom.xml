@@ -12,6 +12,7 @@
 	<artifactId>tycoons</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tycoons</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -50,7 +51,17 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 
 
 
@@ -62,6 +73,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+					<proc>none</proc>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
